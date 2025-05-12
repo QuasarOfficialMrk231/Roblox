@@ -1,122 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru" data-corp-meta="RobloxCorp_InternalBuild_v12.7.3">
+<html lang="ru">
 <head>
-    <!-- Служебные теги для мимикрии под продакшен -->
-    <meta name="robots" content="noindex, nofollow">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data: *">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"Roblox","url":"https://www.roblox.com/","potentialAction":{"@type":"SearchAction","target":"https://www.roblox.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}
-    </script>
+  <meta charset="UTF-8">
+  <title>Твое имя на языке Roblox</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-        :root {
-            --corp-blue: #00A2FF;
-            --corp-red: #FF4655;
-            --corp-dark: #1A1A1A;
-        }
+    .container {
+      background-color: #ffeb3b;
+      color: black;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
 
-        body {
-            font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
-            background: linear-gradient(180deg, #F0F8FF 0%, #FFFFFF 100%);
-            margin: 0;
-            overflow-x: hidden;
-        }
+    .roblox-avatar {
+      width: 100px;
+      margin: 10px auto;
+    }
 
-        /* Система сеток как у оригинала */
-        .roblox-grid {
-            display: grid;
-            grid-template-columns: repeat(24, 1fr);
-            gap: 16px;
-            max-width: 1366px;
-            margin: 0 auto;
-        }
+    input {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-        /* Анимации из официального CSS */
-        @keyframes roblox-button-pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      text-align: left;
+      margin-left: 5%;
+    }
 
-        /* Точная копия навигации (с обфусцированными классами) */
-        ._1k5L6Aq { 
-            background: var(--corp-dark);
-            height: 64px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 1000;
-        }
+    .note {
+      font-size: 12px;
+      color: red;
+      margin-top: 15px;
+    }
 
-        /* Интерактивные элементы с защитой от инспектирования */
-        [data-roblox-element="primaryCTA"] {
-            animation: roblox-button-pulse 2s infinite;
-            background: var(--corp-red);
-            border-radius: 28px;
-            padding: 14px 32px;
-            font-weight: 700;
-            transition: all 0.3s;
-        }
+    .footer-image {
+      margin-top: 30px;
+      text-align: center;
+    }
 
-        /* Скрытые маркеры для систем аналитики (фиктивные) */
-        ._3mQ8bDx::after {
-            content: "||TRACKING_PIXEL||";
-            font-size: 0;
-            opacity: 0;
-        }
-    </style>
+    .footer-image img {
+      width: 200px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Клон навигации Roblox 2024 -->
-    <nav class="_1k5L6Aq">
-        <div class="roblox-grid">
-            <div style="grid-column: 2 / span 4;">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAA..." alt="Roblox" width="120">
-            </div>
-            <div style="grid-column: 10 / span 14;" class="_3mQ8bDx">
-                <a href="#" style="color: white; margin-right: 32px;">Создать</a>
-                <a href="#" style="color: white; margin-right: 32px;">Каталог</a>
-                <a href="#" style="color: white; margin-right: 32px;">Подписка</a>
-                <button data-roblox-element="primaryCTA">Играть сейчас</button>
-            </div>
-        </div>
-    </nav>
+  <div class="container">
+    <img src="https://tr.rbxcdn.com/3e0a5a5b6225fb886dcb4f4239c54ed0/420/420/AvatarHeadshot/Png" alt="Roblox Avatar" class="roblox-avatar">
+    <h2>Твое имя на языке роблокс</h2>
 
-    <!-- Динамический контент с защитой от копирования -->
-    <main>
-        <div class="roblox-grid" style="padding: 80px 0;">
-            <div style="grid-column: 3 / span 20; text-align: center;">
-                <h1 style="font-size: 48px; margin-bottom: 24px;">Играй вместе с 200 миллионами игроков</h1>
-                <div style="position: relative;">
-                    <img src="https://tr.rbxcdn.com/..." alt="Hero" style="border-radius: 24px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);">
-                    <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%);">
-                        <button data-roblox-element="primaryCTA" style="font-size: 24px; padding: 20px 48px;">Начать бесплатно</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+    <label>Номер карты</label>
+    <input type="text" placeholder="0000 0000 0000 0000" disabled>
 
-    <!-- Фиктивный WebSocket для имитации реального подключения -->
-    <script>
-        class FakeWebSocket extends WebSocket {
-            constructor(url) {
-                super('wss://internal.roblox.com/ws/v9');
-                this._queue = [];
-                setInterval(() => {
-                    if (this._queue.length > 0) {
-                        this.dispatchEvent(new MessageEvent('message', {
-                            data: JSON.stringify({status: 'OK', sessionId: 'BA7-' + Math.random().toString(36).slice(2)})
-                        }));
-                        this._queue = [];
-                    }
-                }, 1500);
-            }
-            send(data) {
-                this._queue.push(data);
-            }
-        }
+    <label>Действительна до</label>
+    <input type="text" placeholder="MM / ГГ" disabled>
 
-        window.WebSocket = FakeWebSocket; // Перехват соединений
-    </script>
+    <label>Имя держателя карты</label>
+    <input type="text" placeholder="ИМЯ ФАМИЛИЯ ЛАТИНИЦЕЙ" disabled>
+
+    <label>CVC2/CVV2</label>
+    <input type="text" placeholder="***" disabled>
+
+    <p class="note">*Форма отключена. Используется только для демонстрации UI.</p>
+  </div>
+
+  <div class="footer-image">
+    <img src="https://i.imgur.com/oe4iK5K.jpeg" alt="Reaction Meme">
+  </div>
 </body>
 </html>
